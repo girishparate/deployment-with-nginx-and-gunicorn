@@ -1,0 +1,59 @@
+STEP 1 : (in github.com)
+create repository in github.com
+
+
+STEP 2 : (in local machine)
+1.initialize git in working directory 
+->  git init
+
+2. add directory to git and commit the changes
+-> git add .
+-> git commit -m "message for commit"
+
+3. add branch in working directory
+-> git branch -M main
+
+4. add remote 
+-> git remote add origin [url of github repository]
+
+5. push to github
+-> git push -U main
+
+
+STEP 3 : (in aws account)
+1. setting aws ec2 instance 
+=> click on "launch instance"
+
+=> select "ubuntu free version with 64bit(x86)"
+
+=> select "t2.micro" instance
+
+=> go to "Configure security group"
+
+=> add rule for "http", "https"
+
+=> finally launch instance
+
+
+STEP 4 : (in ec2 dashboard)
+=> if the instance is in running state, click on instance
+
+=> click on "Connect" button
+
+=> select "Ubuntu" and Connect, You will get terminal
+
+=> if we get terminal for command
+-> git clone [url of github repository]
+
+NOTE : (in aws ec2 instance)
+ 
+1. the directory of project should look like
+"/home/ubuntu/project_folder/project_folder/settings.py"
+
+
+2. the manage.py file should be located in
+"/home/ubuntu/project_folder/manage.py"
+
+3. the allowed host and debug should be change in django settings.py file
+debug = False
+allowed_host = ['*']
